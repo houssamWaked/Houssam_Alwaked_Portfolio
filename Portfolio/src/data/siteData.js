@@ -48,43 +48,70 @@ export const projects = [
   },
 
   {
-    id: 'damas',
-    name: 'Damas',
-    type: 'Pro Framer Template',
-    tone: 'mint',
-    image: '/projects/damas.svg',
-    summary: 'Commerce template focused on clarity and speed.',
+    id: 'aqlura-website',
+    name: 'Aqlura Website',
+    type: 'Full-Stack Production Website',
+    tone: 'dark',
+    image: '/projects/aqlura.png',
+    summary:
+      'Full-stack company website with authenticated inquiry flow, admin panel, content CRUD, analytics, notifications, and audit logging.',
     overview:
-      'Damas is a commerce-ready template focused on fast product discovery and a clean checkout experience.',
+      'Aqlura’s website is a production-ready platform designed for client acquisition and credibility. It includes a public marketing site, user authentication, a gated inquiry system, and a full admin panel for inquiry handling, analytics, content management, and audit logs.',
     challenge:
-      'Organize large catalogs without overwhelming the user while preserving brand elegance.',
+      'Build a fast, credible, engineering-driven website that converts visitors into qualified leads while keeping data secure, workflows structured, and administration scalable for a small team.',
     solution:
-      'Built a layered card system with clear hierarchy, plus a tight typographic scale for quick scanning.',
-    role: 'Visual design, design system',
-    year: '2023',
-    stack: ['Framer', 'Figma', 'Tailwind'],
+      'Implemented a separated frontend/backend architecture with a layered monolith API, RDS-backed data model, role-based access control, admin 2FA, audit logging, and an inquiry lifecycle designed for real operations. Deployed with independent CI/CD pipelines for frontend and backend.',
+    role: 'Full-stack engineering, system architecture, backend/API, database design, deployment',
+    year: '2026',
+    stack: [
+      'Next.js',
+      'Node.js',
+      'Express.js',
+      'MySQL (RDS)',
+      'AWS ECS Fargate',
+      'AWS SES',
+      'AWS Secrets Manager',
+      'Vercel',
+      'GitHub Actions',
+      'Google reCAPTCHA',
+    ],
     highlights: [
-      'Product card system',
-      'Clean checkout flow',
-      'Performance-minded layout',
+      'Public site + authenticated user portal + admin panel',
+      'Gated inquiry submission (login required) with dynamic inquiry types',
+      'Inquiry lifecycle: New → In Progress → Closed → Archived',
+      'Multi-admin assignment per inquiry + single official stored response',
+      'In-app notifications + email notifications (SES)',
+      'Admin 2FA via email OTP',
+      'Analytics dashboards + exports (CSV/PDF)',
+      'Audit logs for role/status/assignment/replies/exports',
     ],
     metrics: [
-      { label: 'Pages shipped', value: '14' },
-      { label: 'Avg load', value: '1.2s' },
-      { label: 'Templates', value: '9' },
+      { label: 'Environments', value: '2 ' },
+      { label: 'Primary modules', value: '7' },
+      { label: 'Auth model', value: 'JWT + Refresh Tokens' },
     ],
-    deliverables: ['Ecommerce UI kit', 'Component library', 'Brand guidelines'],
+    deliverables: [
+      'Production Next.js frontend',
+      'Node/Express API (layered monolith)',
+      'MySQL schema + migrations',
+      'Admin panel (CRUD + workflows)',
+      'Analytics & reporting',
+      'Audit logging system',
+      'CI/CD pipelines (GitHub Actions)',
+      'Deployment on Vercel + AWS ECS/RDS',
+    ],
     links: [
-      { label: 'Live preview', href: '#' },
-      { label: 'Case study', href: '#' },
+      { label: 'Live website', href: 'https://aqlura.com' },
+      { label: 'API endpoint', href: 'https://api.aqlura.com' },
     ],
   },
+
   {
     id: 'scout-app',
     name: 'ScoutHub',
     type: 'Mobile App (Community / Youth)',
     tone: 'green',
-    image: '/projects/scouthub.svg',
+    image: '/projects/scouthub.png',
     summary:
       'A digital hub for managing scout divisions, members, and leadership roles in a clear, modern mobile experience.',
     overview:
@@ -147,9 +174,9 @@ export const experiences = [
   },
   {
     company: 'Aqlura',
-    title: 'Founder',
+    title: 'Co-Founder',
     summary:
-      'Founded Aqlura, a startup focused on building modern digital products and software solutions.',
+      'Co-Founded Aqlura, a startup focused on building modern digital products and software solutions.',
     dates: '2025 - Present',
     location: 'Remote',
     highlights: [
@@ -166,108 +193,108 @@ export const tools = [
   {
     name: 'JavaScript',
     description: 'Core language for web and app development',
-    icon: 'JS',
+    icon: 'javascript',
   },
   {
     name: 'TypeScript',
     description: 'Typed superset of JavaScript for scalable apps',
-    icon: 'TS',
+    icon: 'typescript',
   },
   {
     name: 'C++',
     description: 'Systems programming and algorithmic problem solving',
-    icon: 'C++',
+    icon: 'cplusplus',
   },
   {
     name: 'Java',
     description: 'Object-oriented programming and backend foundations',
-    icon: 'J',
+    icon: 'java',
   },
 
   // Frontend
   {
     name: 'React',
     description: 'Component-based UI library for web interfaces',
-    icon: 'R',
+    icon: 'react',
   },
   {
     name: 'Next.js',
     description: 'React framework for production-ready web apps',
-    icon: 'Nx',
+    icon: 'nextjs',
   },
   {
     name: 'HTML',
     description: 'Structuring web content',
-    icon: 'H',
+    icon: 'html5',
   },
   {
     name: 'CSS',
     description: 'Styling and responsive layouts',
-    icon: 'C',
+    icon: 'css',
   },
 
   // Mobile
   {
     name: 'React Native',
     description: 'Cross-platform mobile development',
-    icon: 'RN',
+    icon: 'reactnative',
   },
   {
     name: 'Expo',
     description: 'React Native toolchain and deployment',
-    icon: 'EX',
+    icon: 'expo',
   },
   {
     name: 'JavaFX',
     description: 'Desktop application development with Java',
-    icon: 'FX',
+    icon: 'javafx',
   },
 
   // Backend
   {
     name: 'Node.js',
     description: 'JavaScript runtime for backend services',
-    icon: 'N',
+    icon: 'nodejs',
   },
   {
     name: 'Express.js',
     description: 'Minimal backend framework for APIs',
-    icon: 'EX',
+    icon: 'express',
   },
   {
     name: 'Spring Boot',
     description: 'Java framework for building RESTful backends',
-    icon: 'SB',
+    icon: 'springboot',
   },
 
   // Database & Backend Services
   {
     name: 'MySQL',
     description: 'Relational database management system',
-    icon: 'SQL',
+    icon: 'mysql',
   },
   {
     name: 'Supabase',
     description: 'Backend-as-a-service with auth and database',
-    icon: 'S',
+    icon: 'supabase',
   },
 
   // Design & Product
   {
     name: 'Figma',
     description: 'UI/UX design and prototyping',
-    icon: 'Fi',
+    icon: 'figma',
   },
   {
     name: 'Framer',
     description: 'Interactive website builder and animations',
-    icon: 'F',
+    icon: 'framer',
   },
 
   // Tools
   {
     name: 'Git',
     description: 'Version control and collaboration',
-    icon: 'G',
+    icon: 'git',
   },
 ];

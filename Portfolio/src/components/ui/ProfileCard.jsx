@@ -1,10 +1,8 @@
 import './styles/ProfileCard.css';
 
 const socials = [
-  { label: 'Dribbble', text: 'Dr' },
-  { label: 'Twitter', text: 'Tw' },
-  { label: 'Instagram', text: 'Ig' },
-  { label: 'YouTube', text: 'Yt' },
+  { label: 'Linkedin', text: 'LI', link: '' },
+  { label: 'Instagram', text: 'Ig', link: '' },
 ];
 
 function ProfileCard() {
@@ -32,7 +30,7 @@ function ProfileCard() {
             key={social.label}
             aria-label={social.label}
           >
-            {social.text}
+            <a href={social.link}>{social.text}</a>
           </button>
         ))}
       </div>

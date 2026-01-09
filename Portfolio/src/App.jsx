@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import NavigationCard from './components/ui/NavigationCard';
 import ProfileCard from './components/ui/ProfileCard';
@@ -24,6 +24,13 @@ function App() {
   const [activeProjectId, setActiveProjectId] = useState(null);
   const activeProject = projects.find((project) => project.id === activeProjectId);
   const ActivePage = activeProject ? ProjectDetailPage : pages[activeSection] ?? HomePage;
+
+  useEffect(() => {
+    const navLabel =
+      navItems.find((item) => item.id === activeSection)?.label ??
+      activeSection.charAt(0).toUpperCase() + activeSection.slice(1);
+    document.title = `Houssam Alwaked | ${navLabel}`;
+  }, [activeSection]);
 
   const handleNavigate = (nextSection) => {
     setActiveSection(nextSection);

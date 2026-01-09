@@ -1,9 +1,7 @@
 import PageWithContact from '../layouts/PageWithContact';
 
 function ContactPage() {
-  return (
-    <PageWithContact />
-  );
+  return <PageWithContact />;
 }
 
 export default ContactPage;
