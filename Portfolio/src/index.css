@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #f4f4f4;
+  background-color: #070707;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg: #161412;
+  --bg-soft: #1f1d1b;
+  --card: #23201f;
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #f4f4f4;
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-dim: rgba(255, 255, 255, 0.7);
+  --accent: #f26a2f;
+  --accent-2: #cbff3f;
+  --heading-font: 'Space Grotesk', sans-serif;
+  --body-font: 'Manrope', sans-serif;
+  --page-scale: 1;
+  --content-width: 1200px;
+  --sidebar-width: 360px;
+  --sidebar-gap: 70px;
+  --content-width-scaled: calc(var(--content-width) * var(--page-scale));
+  --fs-h1: 110px;
+  --lh-h1: 1;
+  --fs-h1-sm: 50px;
+  --lh-h1-sm: 1.2;
+  --fs-h2: 90px;
+  --lh-h2: 1;
+  --fs-h2-sm: 38px;
+  --lh-h2-sm: 1.2;
+  --fs-h3: 26px;
+  --lh-h3: 1.2;
+  --fs-h3-sm: 24px;
+  --lh-h3-sm: 1.2;
+  --fs-h4: 18px;
+  --lh-h4: 1.2;
+  --fs-h5: 16px;
+  --lh-h5: 1.2;
+  --fs-h6: 14px;
+  --lh-h6: 1.2;
+  --fs-p: 18px;
+  --lh-p: 1.4;
+  --fs-p-sm: 14px;
+  --lh-p-sm: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 10%, #2a2420 0%, #161412 55%);
+  color: var(--text);
+  font-family: var(--body-font);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+}
+
+h5 {
+  font-size: var(--fs-h5);
+  line-height: var(--lh-h5);
+}
+
+h6 {
+  font-size: var(--fs-h6);
+  line-height: var(--lh-h6);
+}
+
+p {
+  font-size: var(--fs-p);
+  line-height: var(--lh-p);
+}
+
+.text-h1-sm {
+  font-size: var(--fs-h1-sm);
+  line-height: var(--lh-h1-sm);
+}
+
+.text-h2-sm {
+  font-size: var(--fs-h2-sm);
+  line-height: var(--lh-h2-sm);
+}
+
+.text-h3-sm {
+  font-size: var(--fs-h3-sm);
+  line-height: var(--lh-h3-sm);
+}
+
+.text-p-sm {
+  font-size: var(--fs-p-sm);
+  line-height: var(--lh-p-sm);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-scale: 1;
+  }
+}
