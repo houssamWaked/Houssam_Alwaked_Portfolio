@@ -22,7 +22,6 @@ function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Send first email
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -33,7 +32,6 @@ function ContactSection() {
       .then(() => console.log('First email sent'))
       .catch((err) => console.error('First email failed:', err));
 
-    // Send second email (optional)
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -52,6 +50,9 @@ function ContactSection() {
         alert('Failed to send emails. Check console for details.');
       });
   };
+
+  // Check if user started typing
+  const hasTyped = Object.values(formData).some((val) => val.trim() !== '');
 
   // Build email preview dynamically
   const preview = `
@@ -117,7 +118,7 @@ Message: ${formData.message}
       </form>
 
       {/* Email Preview */}
-      {preview.trim() && (
+      {hasTyped && (
         <div
           style={{
             marginTop: '20px',
