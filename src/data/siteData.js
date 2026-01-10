@@ -10,7 +10,7 @@ export const projects = [
     name: 'GradePoint',
     type: 'Mobile App (Education)',
     tone: 'blue',
-    image: '/projects/GradePoint.png',
+    image: 'projects/GradePoint.png',
     summary:
       'A clean, offline-first GPA and cumulative grade calculator for students.',
     overview:
@@ -52,7 +52,7 @@ export const projects = [
     name: 'Aqlura Website',
     type: 'Full-Stack Production Website',
     tone: 'dark',
-    image: '/projects/aqlura.png',
+    image: 'projects/aqlura.png',
     summary:
       'Full-stack company website with authenticated inquiry flow, admin panel, content CRUD, analytics, notifications, and audit logging.',
     overview:
@@ -111,7 +111,7 @@ export const projects = [
     name: 'ScoutHub',
     type: 'Mobile App (Community / Youth)',
     tone: 'green',
-    image: '/projects/scouthub.png',
+    image: 'projects/scouthub.png',
     summary:
       'A digital hub for managing scout divisions, members, and leadership roles in a clear, modern mobile experience.',
     overview:

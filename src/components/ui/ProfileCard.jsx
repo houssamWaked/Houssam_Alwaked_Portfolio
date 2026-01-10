@@ -1,7 +1,11 @@
 import './styles/ProfileCard.css';
 
 const socials = [
-  { label: 'Linkedin', text: 'LI', link: '' },
+  {
+    label: 'Linkedin',
+    text: 'LI',
+    link: 'https://lb.linkedin.com/in/houssam-alwaked-b6382b356',
+  },
   { label: 'Instagram', text: 'Ig', link: '' },
 ];
 
@@ -9,7 +13,7 @@ function ProfileCard() {
   return (
     <article className="profile-card">
       <div className="profile-card__image">
-        <img src="/icons/profile.png" alt="Portrait of Houssam Alwaked" />
+        <img src="icons/profile.png" alt="Portrait of Houssam Alwaked" />
       </div>
 
       <h3 className="profile-card__name">Houssam Alwaked</h3>
