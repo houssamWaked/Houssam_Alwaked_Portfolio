@@ -10,7 +10,6 @@ function ContactSection() {
     message: '',
   });
 
-  // Update formData on input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -18,37 +17,50 @@ function ContactSection() {
       [name]: value,
     }));
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
+    const MAX_SENDS = 5;
+    const WINDOW_MS = 24 * 60 * 60 * 1000;
+    const key = 'contact_send_log';
+
+    const now = Date.now();
+    const log = JSON.parse(localStorage.getItem(key) || '[]');
+    const recent = log.filter((t) => now - t < WINDOW_MS);
+
+    if (recent.length >= MAX_SENDS) {
+      alert('Limit reached. Try again tomorrow.');
+      return;
+    }
+
+    try {
+      // send first email
+      await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         e.target,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => console.log('First email sent'))
-      .catch((err) => console.error('First email failed:', err));
+      );
 
-    emailjs
-      .sendForm(
+      // send second email
+      await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID_2,
         e.target,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => {
-        console.log('Second email sent');
-        alert('Emails sent successfully!');
-        e.target.reset();
-        setFormData({ name: '', email: '', budget: '', message: '' });
-      })
-      .catch((err) => {
-        console.error('Second email failed:', err);
-        alert('Failed to send emails. Check console for details.');
-      });
+      );
+
+      // ✅ record ONLY after success
+      recent.push(now);
+      localStorage.setItem(key, JSON.stringify(recent));
+
+      alert('Emails sent successfully!');
+      e.target.reset();
+      setFormData({ name: '', email: '', budget: '', message: '' });
+    } catch (err) {
+      console.error('Email failed:', err);
+      alert('Failed to send emails. Please try again later.');
+    }
   };
 
   // Check if user started typing

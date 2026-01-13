@@ -600,3 +600,7 @@
     height: 480px;
   }
 }
+.profile-card::before,
+.profile-card::after {
+  pointer-events: none;
+}
