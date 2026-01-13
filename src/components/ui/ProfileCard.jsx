@@ -17,7 +17,7 @@ function ProfileCard() {
   return (
     <article className="profile-card">
       <div className="profile-card__image">
-        <img src="/icons/profile.png" alt="Portrait of Houssam Alwaked" />
+        <img src="icons/profile.png" alt="Portrait of Houssam Alwaked" />
       </div>
 
       <h3 className="profile-card__name">Houssam Alwaked</h3>
