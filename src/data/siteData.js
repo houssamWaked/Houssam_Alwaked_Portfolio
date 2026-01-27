@@ -43,7 +43,10 @@ export const projects = [
         label: 'GitHub',
         href: 'https://github.com/houssamWaked/Simple-GPA-Calculator',
       },
-      { label: 'Play Store', href: '#' },
+      {
+        label: 'EXPO APK',
+        href: 'https://expo.dev/accounts/houssamwaked/projects/grade-point/builds/fa2890b8-dcff-4be1-a146-7a04537d9c15',
+      },
     ],
   },
 
