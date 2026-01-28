@@ -33,6 +33,7 @@ export const projects = [
       { label: 'Cold start', value: '< 1s' },
       { label: 'Screens', value: '6+' },
     ],
+    progress: { value: 92, label: 'Launch-ready' },
     deliverables: [
       'Mobile application',
       'UI theme system',
@@ -46,6 +47,51 @@ export const projects = [
       {
         label: 'EXPO APK',
         href: 'https://expo.dev/accounts/houssamwaked/projects/grade-point/builds/fa2890b8-dcff-4be1-a146-7a04537d9c15',
+      },
+    ],
+  },
+  {
+    id: 'portfolio-site',
+    name: 'Personal Portfolio',
+    type: 'Web App (Portfolio)',
+    tone: 'purple',
+    image: 'projects/cv.png',
+    summary:
+      'A modern developer portfolio to showcase projects, skills, and experience.',
+    overview:
+      'A fast, responsive personal portfolio built to present projects with clear structure and strong visual identity. It focuses on readability, smooth navigation, and performance while staying minimal and professional.',
+    challenge:
+      'Creating a portfolio that feels professional without being boring, while keeping load time fast and content easy to update.',
+    solution:
+      'Designed a component-based layout with reusable project cards, smooth routing, and a structured data-driven system for easy scaling and maintenance.',
+    role: 'UI design, frontend development, content architecture',
+    year: '2025',
+    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    highlights: [
+      'Data-driven project sections',
+      'Responsive layout for all screen sizes',
+      'Animated transitions',
+      'SEO-friendly structure',
+    ],
+    metrics: [
+      { label: 'Pages', value: '4+' },
+      { label: 'Lighthouse', value: '95+' },
+      { label: 'Load time', value: '< 1s' },
+    ],
+    progress: { value: 100, label: 'Completed' },
+    deliverables: [
+      'Portfolio website',
+      'Reusable UI components',
+      'Project showcase system',
+    ],
+    links: [
+      {
+        label: 'GitHub',
+        href: 'https://github.com/houssamWaked/Houssam_Alwaked_Portfolio',
+      },
+      {
+        label: 'Live Site',
+        href: 'https://houssamwaked.github.io/Houssam_Alwaked_Portfolio/',
       },
     ],
   },
@@ -93,6 +139,7 @@ export const projects = [
       { label: 'Primary modules', value: '7' },
       { label: 'Auth model', value: 'JWT + Refresh Tokens' },
     ],
+    progress: { value: 25, label: 'UI/UX Almost Done' },
     deliverables: [
       'Production Next.js frontend',
       'Node/Express API (layered monolith)',
@@ -104,11 +151,66 @@ export const projects = [
       'Deployment on Vercel + AWS ECS/RDS',
     ],
     links: [
-      { label: 'Live website', href: 'https://aqlura.com' },
-      { label: 'API endpoint', href: 'https://api.aqlura.com' },
+      {
+        label: 'UI Design',
+        href: 'https://incomparable-answers-288116.framer.app/',
+      },
+      { label: 'Website Domain', href: 'https://aqlura.com/' },
     ],
   },
-
+  {
+    id: 'mini-market-api',
+    name: 'Mini Market API',
+    type: 'Backend API (E-commerce / Inventory & Orders)',
+    tone: 'blue',
+    image: 'projects/market.png',
+    summary:
+      'A production-ready Spring Boot REST API for product and order management with Firestore persistence, stock validation, and API-key protection.',
+    overview:
+      'Mini Market API is a backend service built for a mini market system. It provides CRUD for products, predefined categories, and order creation with transactional stock decrement in Firestore. It is designed to be frontend-friendly with consistent JSON errors, environment-based CORS, and secure access via an API key header.',
+    challenge:
+      'Ensuring stock integrity during concurrent order creation while keeping the API simple, predictable, and safe for browser-based clients (CORS + preflight) without adding heavy infrastructure or SQL.',
+    solution:
+      'Implemented Firestore-backed repositories with transactional stock checks and atomic decrement during order creation. Added dedicated stock adjustment endpoints, centralized error handling with a consistent JSON schema, environment-driven CORS allowlist for web clients, and API-key middleware for all /api/* routes.',
+    role: 'Backend development, API design, security, deployment configuration',
+    year: '2026',
+    stack: [
+      'Java 17',
+      'Spring Boot',
+      'Firestore',
+      'Firebase Admin SDK',
+      'REST API',
+      'Railway',
+    ],
+    highlights: [
+      'Product CRUD (create/list/update/delete)',
+      'Order creation with stock validation',
+      'Atomic stock decrement with Firestore transactions',
+      'Dedicated stock set/decrement endpoints',
+      'Predefined categories endpoint',
+      'Centralized JSON error responses',
+      'API key protection for all /api/* routes',
+      'Environment-based CORS allowlist for frontend access',
+    ],
+    metrics: [
+      { label: 'Deploy', value: 'Railway' },
+      { label: 'Persistence', value: 'Firestore' },
+      { label: 'Auth', value: 'X-API-KEY' },
+      { label: 'Core Resources', value: 'Products / Orders / Categories' },
+    ],
+    progress: { value: 90, label: 'PRODUCTION READY' },
+    deliverables: [
+      'Spring Boot backend service',
+      'Firestore collections (products, categories, orders)',
+      'Order transaction + stock integrity logic',
+      'API key security layer',
+      'CORS configuration via environment variables',
+      'Postman-ready API documentation (README)',
+    ],
+    links: [
+      { label: 'GitHub', href: 'https://github.com/houssamWaked/MiniShopApi' },
+    ],
+  },
   {
     id: 'scout-app',
     name: 'ScoutHub',
@@ -133,6 +235,7 @@ export const projects = [
       'Supabase',
       'PostgreSQL',
       'Context API',
+      'Forest Admin Dashboard',
     ],
     highlights: [
       'Division-based scout management',
@@ -140,6 +243,7 @@ export const projects = [
       'Arabic-safe data normalization',
       'Resilient Supabase data fetching',
       'Mobile-first UI optimized for field use',
+      'Easy to Use Dashboard',
     ],
     metrics: [
       { label: 'Platforms', value: 'Android' },
@@ -147,6 +251,7 @@ export const projects = [
       { label: 'Members', value: '50+' },
       { label: 'Screens', value: '8+' },
     ],
+    progress: { value: 85, label: 'V1 READY' },
     deliverables: [
       'Mobile application',
       'Supabase database schema',
@@ -154,8 +259,14 @@ export const projects = [
       'Reusable data hooks',
     ],
     links: [
-      { label: 'GitHub', href: '#' },
-      { label: 'Play Store', href: '#' },
+      {
+        label: 'GitHub',
+        href: 'https://github.com/houssamWaked/alforqan-scout',
+      },
+      {
+        label: 'Expo Apk',
+        href: 'https://expo.dev/accounts/houssamwaked/projects/alforqanapp/builds/43800def-2833-49e2-ba06-c92830fb66f7',
+      },
     ],
   },
 ];

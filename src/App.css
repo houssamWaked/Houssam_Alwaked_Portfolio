@@ -580,6 +580,12 @@
   line-height: var(--lh-h3);
 }
 
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .project-info p,
 .experience-card p,
 .thought-card p {
@@ -587,6 +593,71 @@
   color: var(--text-dim);
   font-size: var(--fs-p-sm);
   line-height: var(--lh-p-sm);
+}
+
+.project-progress {
+  display: grid;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.project-progress__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: var(--fs-h6);
+  line-height: var(--lh-h6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.project-progress__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-progress__value {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.project-progress__bar {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.project-progress__fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  position: relative;
+  box-shadow: 0 0 12px rgba(242, 106, 47, 0.25);
+}
+
+.project-progress__fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28) 0,
+    rgba(255, 255, 255, 0.28) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  opacity: 0.35;
 }
 
 .card-arrow--small {
