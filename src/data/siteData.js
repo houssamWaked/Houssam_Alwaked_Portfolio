@@ -47,6 +47,7 @@ export const projects = [
       {
         label: 'EXPO APK',
         href: 'https://expo.dev/accounts/houssamwaked/projects/grade-point/builds/fa2890b8-dcff-4be1-a146-7a04537d9c15',
+        note: 'Play Store build is half the size of the Expo APK.',
       },
     ],
   },
@@ -198,7 +199,7 @@ export const projects = [
       { label: 'Auth', value: 'X-API-KEY' },
       { label: 'Core Resources', value: 'Products / Orders / Categories' },
     ],
-    progress: { value: 90, label: 'PRODUCTION READY' },
+    progress: { value: 100, label: 'PRODUCTION READY' },
     deliverables: [
       'Spring Boot backend service',
       'Firestore collections (products, categories, orders)',

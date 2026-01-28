@@ -127,7 +127,14 @@ function ProjectDetailSection({ project, onBack = () => {} }) {
                       rel={isExternal ? 'noreferrer' : undefined}
                       target={isExternal ? '_blank' : undefined}
                     >
-                      {link.label}
+                      <span className="project-detail__link-text">
+                        <span>{link.label}</span>
+                        {link.note ? (
+                          <span className="project-detail__link-note">
+                            {link.note}
+                          </span>
+                        ) : null}
+                      </span>
                       <span aria-hidden="true">-&gt;</span>
                     </a>
                   );
