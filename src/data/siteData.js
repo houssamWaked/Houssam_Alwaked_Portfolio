@@ -52,7 +52,7 @@ export const projects = [
     ],
     links: [
       {
-        label: 'Live Demo',
+        label: 'Website ',
         href: 'https://trivia-verse-eight.vercel.app/',
       },
     ],
