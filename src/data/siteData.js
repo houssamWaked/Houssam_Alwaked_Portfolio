@@ -212,59 +212,59 @@ export const projects = [
       { label: 'Website Domain', href: 'https://aqlura.com/' },
     ],
   },
-  {
-    id: 'mini-market-api',
-    name: 'Mini Market API',
-    type: 'Backend API (E-commerce / Inventory & Orders)',
-    tone: 'blue',
-    image: 'projects/market.png',
-    summary:
-      'A production-ready Spring Boot REST API for product and order management with Firestore persistence, stock validation, and API-key protection.',
-    overview:
-      'Mini Market API is a backend service built for a mini market system. It provides CRUD for products, predefined categories, and order creation with transactional stock decrement in Firestore. It is designed to be frontend-friendly with consistent JSON errors, environment-based CORS, and secure access via an API key header.',
-    challenge:
-      'Ensuring stock integrity during concurrent order creation while keeping the API simple, predictable, and safe for browser-based clients (CORS + preflight) without adding heavy infrastructure or SQL.',
-    solution:
-      'Implemented Firestore-backed repositories with transactional stock checks and atomic decrement during order creation. Added dedicated stock adjustment endpoints, centralized error handling with a consistent JSON schema, environment-driven CORS allowlist for web clients, and API-key middleware for all /api/* routes.',
-    role: 'Backend development, API design, security, deployment configuration',
-    year: '2026',
-    stack: [
-      'Java 17',
-      'Spring Boot',
-      'Firestore',
-      'Firebase Admin SDK',
-      'REST API',
-      'Railway',
-    ],
-    highlights: [
-      'Product CRUD (create/list/update/delete)',
-      'Order creation with stock validation',
-      'Atomic stock decrement with Firestore transactions',
-      'Dedicated stock set/decrement endpoints',
-      'Predefined categories endpoint',
-      'Centralized JSON error responses',
-      'API key protection for all /api/* routes',
-      'Environment-based CORS allowlist for frontend access',
-    ],
-    metrics: [
-      { label: 'Deploy', value: 'Railway' },
-      { label: 'Persistence', value: 'Firestore' },
-      { label: 'Auth', value: 'X-API-KEY' },
-      { label: 'Core Resources', value: 'Products / Orders / Categories' },
-    ],
-    progress: { value: 100, label: 'PRODUCTION READY' },
-    deliverables: [
-      'Spring Boot backend service',
-      'Firestore collections (products, categories, orders)',
-      'Order transaction + stock integrity logic',
-      'API key security layer',
-      'CORS configuration via environment variables',
-      'Postman-ready API documentation (README)',
-    ],
-    links: [
-      { label: 'GitHub', href: 'https://github.com/houssamWaked/MiniShopApi' },
-    ],
-  },
+  // {
+  //   id: 'mini-market-api',
+  //   name: 'Mini Market API',
+  //   type: 'Backend API (E-commerce / Inventory & Orders)',
+  //   tone: 'blue',
+  //   image: 'projects/market.png',
+  //   summary:
+  //     'A production-ready Spring Boot REST API for product and order management with Firestore persistence, stock validation, and API-key protection.',
+  //   overview:
+  //     'Mini Market API is a backend service built for a mini market system. It provides CRUD for products, predefined categories, and order creation with transactional stock decrement in Firestore. It is designed to be frontend-friendly with consistent JSON errors, environment-based CORS, and secure access via an API key header.',
+  //   challenge:
+  //     'Ensuring stock integrity during concurrent order creation while keeping the API simple, predictable, and safe for browser-based clients (CORS + preflight) without adding heavy infrastructure or SQL.',
+  //   solution:
+  //     'Implemented Firestore-backed repositories with transactional stock checks and atomic decrement during order creation. Added dedicated stock adjustment endpoints, centralized error handling with a consistent JSON schema, environment-driven CORS allowlist for web clients, and API-key middleware for all /api/* routes.',
+  //   role: 'Backend development, API design, security, deployment configuration',
+  //   year: '2026',
+  //   stack: [
+  //     'Java 17',
+  //     'Spring Boot',
+  //     'Firestore',
+  //     'Firebase Admin SDK',
+  //     'REST API',
+  //     'Railway',
+  //   ],
+  //   highlights: [
+  //     'Product CRUD (create/list/update/delete)',
+  //     'Order creation with stock validation',
+  //     'Atomic stock decrement with Firestore transactions',
+  //     'Dedicated stock set/decrement endpoints',
+  //     'Predefined categories endpoint',
+  //     'Centralized JSON error responses',
+  //     'API key protection for all /api/* routes',
+  //     'Environment-based CORS allowlist for frontend access',
+  //   ],
+  //   metrics: [
+  //     { label: 'Deploy', value: 'Railway' },
+  //     { label: 'Persistence', value: 'Firestore' },
+  //     { label: 'Auth', value: 'X-API-KEY' },
+  //     { label: 'Core Resources', value: 'Products / Orders / Categories' },
+  //   ],
+  //   progress: { value: 100, label: 'PRODUCTION READY' },
+  //   deliverables: [
+  //     'Spring Boot backend service',
+  //     'Firestore collections (products, categories, orders)',
+  //     'Order transaction + stock integrity logic',
+  //     'API key security layer',
+  //     'CORS configuration via environment variables',
+  //     'Postman-ready API documentation (README)',
+  //   ],
+  //   links: [
+  //     { label: 'GitHub', href: 'https://github.com/houssamWaked/MiniShopApi' },
+  //   ],
+  // },
   {
     id: 'scout-app',
     name: 'ScoutHub',
