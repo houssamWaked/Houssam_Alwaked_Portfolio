@@ -6,6 +6,59 @@ export const heroStats = [
 
 export const projects = [
   {
+    id: 'triviav',
+    name: 'TriviaV',
+    type: 'Web & Mobile Trivia Platform (Gaming/Education)',
+    tone: 'purple',
+    image: 'projects/TriviaV.png',
+    summary:
+      'A fast, competitive trivia platform with story levels, blitz modes, duels, and progression systems.',
+    overview:
+      'TriviaV is a modern trivia experience that mixes quick-match intensity with structured progression. Players can climb through story levels, jump into Blitz (easy/medium/hard), and compete in duels—all with clean UX, consistent design tokens, and a backend built for scalable question delivery.',
+    challenge:
+      'Building a trivia platform that feels instant and fair: low-latency question loading, clean anti-duplication pools, clear difficulty scaling, and a content pipeline that makes adding hundreds of questions realistic.',
+    solution:
+      'Designed a mode-based architecture with reusable pools, server-validated sessions, and a consistent UI system. Implemented structured difficulty tiers, optimized fetching patterns (session-based question bundles instead of per-question round trips), and built admin-friendly endpoints to seed, assign, and manage question pools.',
+    role: 'Full-stack engineering, product design, UI system, backend architecture',
+    year: '2026',
+    stack: [
+      'React',
+      'Node.js',
+      'Express',
+      'Supabase',
+      'PostgreSQL',
+      'JWT Auth',
+      'Vercel',
+    ],
+    highlights: [
+      'Story mode with level-based progression (10 levels × 10 questions)',
+      'Blitz mode with Easy/Medium/Hard tiers mapped to difficulty ranges',
+      'Question pools + assignment system to reduce repeats and keep sessions consistent',
+      'Admin APIs for categories, levels, pools, and question management',
+      'Consistent design tokens (colors, gradients, buttons, cards)',
+    ],
+    metrics: [
+      { label: 'Modes', value: 'Story • Blitz • Duels • Classic' },
+      { label: 'Questions per level', value: '10' },
+      { label: 'Difficulty bands', value: '1–3 • 4–7 • 8–10' },
+    ],
+    progress: { value: 100, label: 'LIVE' },
+    deliverables: [
+      'Web application',
+      'REST API backend',
+      'Supabase database schema + seed scripts',
+      'UI design system (tokens + reusable components)',
+      'Question pipeline (levels, pools, difficulty mapping)',
+    ],
+    links: [
+      {
+        label: 'Live Demo',
+        href: 'https://trivia-verse-eight.vercel.app/',
+      },
+    ],
+  },
+
+  {
     id: 'gpa-calc',
     name: 'GradePoint',
     type: 'Mobile App (Education)',
