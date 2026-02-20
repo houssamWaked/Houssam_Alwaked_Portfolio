@@ -28,7 +28,7 @@
 
 .fixed-profile {
   position: fixed;
-  top: 160px;
+  top: 140px;
   left: calc(50% - (var(--content-width-scaled) / 2));
   width: var(--sidebar-width);
   transform: scale(var(--page-scale));
