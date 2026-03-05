@@ -1,6 +1,6 @@
 export const heroStats = [
   { value: '+1', label: 'Years of Experience' },
-  { value: '+5', label: 'Projects Completed' },
+  { value: '+7', label: 'Projects Completed' },
   { value: '+2', label: 'Worldwide Clients' },
 ];
 
@@ -210,6 +210,111 @@ export const projects = [
         href: 'https://incomparable-answers-288116.framer.app/',
       },
       { label: 'Website Domain', href: 'https://aqlura.com/' },
+    ],
+  },
+  {
+    id: 'burger-bachelor',
+    name: 'Burger Bachelor',
+    type: 'Multi-Page Restaurant Website (Burger Brand)',
+    tone: 'dark',
+    image: 'projects/burger-website.png',
+    summary:
+      'A fully animated burger website connected to a live multi-tenant backend with dynamic menu/cart/admin flows.',
+    overview:
+      'Burger Bachelor is a full restaurant website with modern landing sections, category-based menu browsing, cart controls, responsive layouts, and a tenant admin dashboard. The frontend consumes live API data and supports multi-page routing and deployment-ready behavior on Vercel.',
+    challenge:
+      'Build a polished food website with real backend data, tenant isolation, admin controls, responsive UI, and deployment-safe routing/CORS behavior.',
+    solution:
+      'Implemented a data-driven frontend with tenant-aware API integration, local caching to reduce request costs, role-based admin flows, and backend endpoints for menu/content management. Finalized production deployment across Vercel (frontend) and Railway (API).',
+    role: 'Full-stack development, API integration, admin UX, deployment',
+    year: '2026',
+    stack: [
+      'React',
+      'Vite',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Sequelize',
+      'Vercel',
+      'Railway',
+    ],
+    highlights: [
+      'Category-sorted menu with animated cards and detail interactions',
+      'Cart system with quantity controls and persistent state',
+      'Dedicated pages: Home, Menu, About, Blog, Contact',
+      'Tenant-aware admin dashboard with role-based access',
+      'Live API integration with cache-first behavior',
+      'Responsive design across desktop/tablet/mobile',
+    ],
+    metrics: [
+      { label: 'Architecture', value: 'Multi-tenant' },
+      { label: 'Frontend', value: 'Vercel' },
+      { label: 'Backend', value: 'Railway + PostgreSQL' },
+    ],
+    progress: { value: 100, label: 'LIVE' },
+    deliverables: [
+      'Production web frontend',
+      'Tenant-aware admin dashboard',
+      'API-backed menu and content management',
+      'Deployment + environment setup',
+    ],
+    links: [
+      { label: 'Live Website', href: 'https://menu-client-pi.vercel.app/' },
+      { label: 'Frontend GitHub', href: 'https://github.com/houssamWaked/MenuClient' },
+      { label: 'Backend GitHub', href: 'https://github.com/houssamWaked/Menu_api' },
+      { label: 'API', href: 'https://menuapi-production.up.railway.app/' },
+    ],
+  },
+  {
+    id: 'pizza-palazzo',
+    name: 'Pizza Palazzo',
+    type: 'Multi-Page Restaurant Website (Pizza Brand)',
+    tone: 'purple',
+    image: 'projects/pizza-website.png',
+    summary:
+      'A full pizza website rebuilt on the same backend platform with a distinct visual style and tenant-specific content.',
+    overview:
+      'Pizza Palazzo reuses the same production backend architecture but presents a separate tenant experience with different branding, sections, and menu data. It demonstrates how one backend can power multiple restaurant websites with isolated accounts and content.',
+    challenge:
+      'Launch a second brand fast without cloning backend complexity, while preserving separate tenant data, admin accounts, and deployment compatibility.',
+    solution:
+      'Extended the existing multi-tenant model and connected a redesigned frontend tenant to the same API. Configured tenant-specific login/content and deployment variables to keep both websites independent but operationally efficient.',
+    role: 'Multi-tenant product engineering, frontend theming, backend reuse strategy',
+    year: '2026',
+    stack: [
+      'React',
+      'Vite',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Sequelize',
+      'Vercel',
+      'Railway',
+    ],
+    highlights: [
+      'Separate tenant content and admin credentials',
+      'Same backend, different brand/site experience',
+      'Reusable architecture for future restaurant brands',
+      'CORS, env, and deployment troubleshooting in production',
+      'Data seeding and tenant bootstrap workflow',
+    ],
+    metrics: [
+      { label: 'Tenant Slug', value: 'pizza-palazzo' },
+      { label: 'Backend Reuse', value: '100%' },
+      { label: 'Admin Model', value: 'Role-based' },
+    ],
+    progress: { value: 100, label: 'LIVE' },
+    deliverables: [
+      'Pizza-branded production frontend',
+      'Tenant data + admin setup',
+      'Shared backend integration',
+      'Deployment-ready environment configuration',
+    ],
+    links: [
+      { label: 'Live Website', href: 'https://menu-client-hkrw.vercel.app/' },
+      { label: 'Frontend GitHub', href: 'https://github.com/houssamWaked/MenuClient' },
+      { label: 'Backend GitHub', href: 'https://github.com/houssamWaked/Menu_api' },
+      { label: 'API', href: 'https://menuapi-production.up.railway.app/' },
     ],
   },
   // {
