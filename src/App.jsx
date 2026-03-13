@@ -22,8 +22,12 @@ const pages = {
 function App() {
   const [activeSection, setActiveSection] = useState(navItems[0]?.id ?? 'home');
   const [activeProjectId, setActiveProjectId] = useState(null);
-  const activeProject = projects.find((project) => project.id === activeProjectId);
-  const ActivePage = activeProject ? ProjectDetailPage : pages[activeSection] ?? HomePage;
+  const activeProject = projects.find(
+    (project) => project.id === activeProjectId
+  );
+  const ActivePage = activeProject
+    ? ProjectDetailPage
+    : (pages[activeSection] ?? HomePage);
 
   useEffect(() => {
     const navLabel =

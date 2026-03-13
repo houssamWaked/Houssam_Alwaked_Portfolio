@@ -1,6 +1,6 @@
 export const heroStats = [
   { value: '+1', label: 'Years of Experience' },
-  { value: '+7', label: 'Projects Completed' },
+  { value: '+8', label: 'Projects Completed' },
   { value: '+2', label: 'Worldwide Clients' },
 ];
 
@@ -260,8 +260,74 @@ export const projects = [
     ],
     links: [
       { label: 'Live Website', href: 'https://menu-client-pi.vercel.app/' },
-      { label: 'Frontend GitHub', href: 'https://github.com/houssamWaked/MenuClient' },
-      { label: 'Backend GitHub', href: 'https://github.com/houssamWaked/Menu_api' },
+      {
+        label: 'Frontend GitHub',
+        href: 'https://github.com/houssamWaked/MenuClient',
+      },
+      {
+        label: 'Backend GitHub',
+        href: 'https://github.com/houssamWaked/Menu_api',
+      },
+      { label: 'API', href: 'https://menuapi-production.up.railway.app/' },
+    ],
+  },
+  {
+    id: 'Savoria',
+    name: 'Savoria',
+    type: 'Coffe Restaurant Website',
+    tone: 'dark',
+    image: 'projects/coffee-website.png',
+    summary:
+      'A modern coffee restaurant website with dynamic menu, cart, and admin features powered by a shared multi-tenant backend.',
+    overview:
+      'Savoria is a full-featured restaurant website designed for a coffee brand. It includes a dynamic menu, cart system, responsive design, and an admin dashboard for content management. The frontend connects to the same multi-tenant backend as Burger Bachelor but presents a distinct tenant experience.',
+    challenge:
+      'Creating a second restaurant website that reuses the existing backend architecture while maintaining separate tenant data, branding, and deployment compatibility.',
+    solution:
+      'Extended the multi-tenant model to support Savoria as a new tenant with its own branding and content. Configured tenant-specific login and data handling while sharing the same API endpoints. Deployed the frontend on Vercel with environment variables to ensure proper CORS and API integration.',
+    role: 'Full-stack development, multi-tenant architecture, frontend theming, deployment configuration',
+    year: '2026',
+    stack: [
+      'React',
+      'Vite',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Sequelize',
+      'Vercel',
+      'Railway',
+    ],
+    highlights: [
+      'Shared backend with separate tenant experience',
+      'Coffee-themed design and menu content',
+      'Admin dashboard for Savoria content management',
+      'Deployment-ready configuration for multi-tenant setup',
+    ],
+    metrics: [
+      { label: 'Tenant Slug', value: 'savoria' },
+      { label: 'Backend Reuse', value: '100%' },
+      { label: 'Admin Model', value: 'Role-based' },
+    ],
+    progress: { value: 100, label: 'LIVE' },
+    deliverables: [
+      'Savoria-branded production frontend',
+      'Tenant data + admin setup',
+      'Shared backend integration',
+      'Deployment-ready environment configuration',
+    ],
+    links: [
+      {
+        label: 'Live Website',
+        href: 'https://menu-client-uswm.vercel.app/?slug=savoria',
+      },
+      {
+        label: 'Frontend GitHub',
+        href: 'https://github.com/houssamWaked/MenuClient',
+      },
+      {
+        label: 'Backend GitHub',
+        href: 'https://github.com/houssamWaked/Menu_api',
+      },
       { label: 'API', href: 'https://menuapi-production.up.railway.app/' },
     ],
   },
@@ -312,9 +378,137 @@ export const projects = [
     ],
     links: [
       { label: 'Live Website', href: 'https://menu-client-hkrw.vercel.app/' },
-      { label: 'Frontend GitHub', href: 'https://github.com/houssamWaked/MenuClient' },
-      { label: 'Backend GitHub', href: 'https://github.com/houssamWaked/Menu_api' },
+      {
+        label: 'Frontend GitHub',
+        href: 'https://github.com/houssamWaked/MenuClient',
+      },
+      {
+        label: 'Backend GitHub',
+        href: 'https://github.com/houssamWaked/Menu_api',
+      },
       { label: 'API', href: 'https://menuapi-production.up.railway.app/' },
+    ],
+  },
+  {
+    id: 'menu-admin-dashboard',
+    name: 'Menu Admin Dashboard',
+    type: 'SaaS Admin Dashboard (Multi-Tenant Restaurant CMS)',
+    tone: 'blue',
+    image: 'projects/menu-admin-dashboard.png',
+    summary:
+      'A role-based dashboard that lets non-technical restaurant owners manage menus, categories, items, pricing, and media in a simple workflow.',
+    overview:
+      'This admin dashboard powers tenant operations for the restaurant platform. It includes super-admin and tenant-admin access levels, guided CRUD flows, KPI cards, file-based image uploads, and streamlined management screens built for users with no programming background.',
+    challenge:
+      'Design an admin experience that stays powerful for business operations but remains simple enough for first-time users, while preserving strict tenant isolation.',
+    solution:
+      'Implemented email/password role detection, separated super-admin and tenant-admin responsibilities, card-based management UX, image upload processing, and API-driven CRUD backed by PostgreSQL with production deployment on Railway/Vercel.',
+    role: 'Full-stack engineering, admin UX architecture, API design',
+    year: '2026',
+    stack: [
+      'React',
+      'Vite',
+      'Axios',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Sequelize',
+      'JWT',
+      'Railway',
+      'Vercel',
+    ],
+    highlights: [
+      'Automatic role detection from login email (super admin vs tenant admin)',
+      'Tenant-only content management with permission guards',
+      'Super-admin tenant/account provisioning workflow',
+      'Guided add/manage/account tabs with KPI summaries',
+      'Image upload support via local file selection and preview',
+      'Search + edit + remove flows for large menu datasets',
+    ],
+    metrics: [
+      { label: 'Roles', value: 'Super Admin + Tenant Admin' },
+      { label: 'Core entities', value: 'Menus • Categories • Items' },
+      { label: 'Data model', value: 'Multi-tenant PostgreSQL' },
+    ],
+    progress: { value: 100, label: 'LIVE' },
+    deliverables: [
+      'Responsive admin frontend',
+      'Secure admin auth/session flow',
+      'Tenant account management',
+      'Menu/category/item management UI',
+      'Production backend integration',
+    ],
+    links: [
+      { label: 'Preview Image', href: '/projects/menu-admin-dashboard.png' },
+      {
+        label: 'Frontend GitHub',
+        href: 'https://github.com/houssamWaked/MenuClient',
+      },
+      {
+        label: 'Backend GitHub',
+        href: 'https://github.com/houssamWaked/Menu_api',
+      },
+    ],
+  },
+  {
+    id: 'Manakish Shop Menu',
+    name: 'Manakish Shop Menu',
+    type: 'Single-Page Restaurant Website (Manakish Brand)',
+    tone: 'green',
+    image: 'projects/manakish.png',
+    summary:
+      'A single-page website for a manakish restaurant with menu, contact info, and location sections.',
+    overview:
+      'This project is a simple, elegant single-page website designed for a manakish restaurant. It features a clean layout with sections for the menu, contact information, and location details, all optimized for quick updates and mobile viewing.',
+    challenge:
+      'Create a focused restaurant website that delivers essential information without overwhelming visitors, while maintaining a distinct brand identity.',
+    solution:
+      'Designed a single-page layout with clear sections for menu items, contact details, and location. Used a consistent color scheme and typography to reflect the brand while ensuring the site is easy to navigate and update.',
+    role: 'Frontend development, UI design',
+    year: '2025',
+    stack: [
+      'React',
+      'Vite',
+      'CSS',
+      'node.js',
+      'Express',
+      'PostgreSQL',
+      'Sequelize',
+      'Vercel',
+      'Railway',
+    ],
+    highlights: [
+      'Single-page design with clear sections',
+      'Cart system with quantity controls and persistent state',
+      'Mobile-first responsive layout',
+      'Brand-focused color scheme and typography',
+      'Easy content update structure',
+      'Easy to Use Admin Dashboard',
+    ],
+    metrics: [
+      { label: 'Pages', value: '1' },
+      { label: 'Load time', value: '< 1s' },
+      { label: 'Sections', value: 'Menu • Cart' },
+    ],
+    progress: { value: 100, label: 'LIVE' },
+    deliverables: [
+      'Single-page restaurant website',
+      'Menu and contact sections',
+      'Mobile-responsive design',
+    ],
+    links: [
+      {
+        label: 'Live Website',
+        href: 'https://manakish.vercel.app/',
+      },
+      {
+        label: 'Frontend GitHub',
+        href: 'https://github.com/houssamWaked/Manakish',
+      },
+      {
+        label: 'Backend GitHub',
+        href: 'https://github.com/houssamWaked/Manakish',
+      },
     ],
   },
   // {
