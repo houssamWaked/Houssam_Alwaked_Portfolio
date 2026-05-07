@@ -171,12 +171,9 @@ export const projects = [
       'Node.js',
       'Express.js',
       'MySQL (RDS)',
-      'AWS ECS Fargate',
-      'AWS SES',
-      'AWS Secrets Manager',
       'Vercel',
-      'GitHub Actions',
-      'Google reCAPTCHA',
+      'GitHub Actions'
+     
     ],
     highlights: [
       'Public site + authenticated user portal + admin panel',
@@ -190,10 +187,9 @@ export const projects = [
     ],
     metrics: [
       { label: 'Environments', value: '2 ' },
-      { label: 'Primary modules', value: '7' },
-      { label: 'Auth model', value: 'JWT + Refresh Tokens' },
+      { label: 'Primary modules', value: '7' }
     ],
-    progress: { value: 25, label: 'UI/UX Almost Done' },
+    progress: { value: 100, label: 'Live' },
     deliverables: [
       'Production Next.js frontend',
       'Node/Express API (layered monolith)',
@@ -202,14 +198,10 @@ export const projects = [
       'Analytics & reporting',
       'Audit logging system',
       'CI/CD pipelines (GitHub Actions)',
-      'Deployment on Vercel + AWS ECS/RDS',
+      'Deployment on Vercel',
     ],
     links: [
-      {
-        label: 'UI Design',
-        href: 'https://incomparable-answers-288116.framer.app/',
-      },
-      { label: 'Website Domain', href: 'https://aqlura.com/' },
+      { label: 'Website Domain', href: 'https://aqlura.com/' }
     ],
   },
   {
