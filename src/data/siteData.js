@@ -187,7 +187,7 @@ export const projects = [
     ],
     metrics: [
       { label: 'Environments', value: '2 ' },
-      { label: 'Primary modules', value: '7' }
+      { label: 'Primary modules', value: '7' }//s
     ],
     progress: { value: 100, label: 'Live' },
     deliverables: [
