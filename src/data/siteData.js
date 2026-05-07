@@ -150,60 +150,70 @@ export const projects = [
     ],
   },
 
-  {
-    id: 'aqlura-website',
-    name: 'Aqlura Website',
-    type: 'Full-Stack Production Website',
-    tone: 'dark',
-    image: 'projects/aqlura.png',
-    summary:
-      'Full-stack company website with authenticated inquiry flow, admin panel, content CRUD, analytics, notifications, and audit logging.',
-    overview:
-      'Aqlura’s website is a production-ready platform designed for client acquisition and credibility. It includes a public marketing site, user authentication, a gated inquiry system, and a full admin panel for inquiry handling, analytics, content management, and audit logs.',
-    challenge:
-      'Build a fast, credible, engineering-driven website that converts visitors into qualified leads while keeping data secure, workflows structured, and administration scalable for a small team.',
-    solution:
-      'Implemented a separated frontend/backend architecture with a layered monolith API, RDS-backed data model, role-based access control, admin 2FA, audit logging, and an inquiry lifecycle designed for real operations. Deployed with independent CI/CD pipelines for frontend and backend.',
-    role: 'Full-stack engineering, system architecture, backend/API, database design, deployment',
-    year: '2026',
-    stack: [
-      'Next.js',
-      'Node.js',
-      'Express.js',
-      'MySQL (RDS)',
-      'Vercel',
-      'GitHub Actions'
-     
-    ],
-    highlights: [
-      'Public site + authenticated user portal + admin panel',
-      'Gated inquiry submission (login required) with dynamic inquiry types',
-      'Inquiry lifecycle: New → In Progress → Closed → Archived',
-      'Multi-admin assignment per inquiry + single official stored response',
-      'In-app notifications + email notifications (SES)',
-      'Admin 2FA via email OTP',
-      'Analytics dashboards + exports (CSV/PDF)',
-      'Audit logs for role/status/assignment/replies/exports',
-    ],
-    metrics: [
-      { label: 'Environments', value: '2 ' },
-      { label: 'Primary modules', value: '7' }//s
-    ],
-    progress: { value: 100, label: 'Live' },
-    deliverables: [
-      'Production Next.js frontend',
-      'Node/Express API (layered monolith)',
-      'MySQL schema + migrations',
-      'Admin panel (CRUD + workflows)',
-      'Analytics & reporting',
-      'Audit logging system',
-      'CI/CD pipelines (GitHub Actions)',
-      'Deployment on Vercel',
-    ],
-    links: [
-      { label: 'Website Domain', href: 'https://aqlura.com/' }
-    ],
-  },
+ {
+  id: 'aqlura-website',
+  name: 'Aqlura Website',
+  type: 'Full-Stack Company Website',
+  tone: 'dark',
+  image: 'projects/aqlura.png',
+
+  summary:
+    'Full-stack company website built with React and a Node/Express backend, designed to present Aqlura professionally and support client inquiries through a structured web platform.',
+
+  overview:
+    'Aqlura’s website is a production company website focused on credibility, clear service presentation, and client communication. It includes a public-facing React frontend connected to a backend API, allowing the business to present its services and handle website data in a structured way.',
+
+  challenge:
+    'Build a professional and reliable company website that clearly presents Aqlura’s services, improves trust with visitors, and keeps the platform easy to maintain and extend.',
+
+  solution:
+    'Developed a React-based frontend with a Node.js and Express backend, structured around clear API routes, reusable components, and a maintainable project architecture. The website was deployed online and connected to the live Aqlura domain.',
+
+  role:
+    'Full-stack development, frontend implementation, backend/API development, UI structure, deployment',
+
+  year: '2026',
+
+  stack: [
+    'React',
+    'JavaScript',
+    'Node.js',
+    'Express.js',
+    'MySQL',
+    'Vercel',
+    'GitHub Actions'
+  ],
+
+  highlights: [
+    'Live company website for Aqlura',
+    'React-based frontend with reusable sections and components',
+    'Backend API built with Node.js and Express',
+    'Professional service presentation and company branding',
+    'Responsive layout for desktop and mobile users',
+    'Structured project architecture for future updates',
+    'Live deployment connected to the official domain'
+  ],
+
+  metrics: [
+    { label: 'Status', value: 'Live' },
+    { label: 'Main stack', value: 'React + Node' }
+  ],
+
+  progress: { value: 100, label: 'Live' },
+
+  deliverables: [
+    'Production React frontend',
+    'Node/Express backend API',
+    'Responsive company website UI',
+    'Reusable frontend components',
+    'Deployment on live domain',
+    'Project structure ready for future improvements'
+  ],
+
+  links: [
+    { label: 'Website Domain', href: 'https://aqlura.com/' }
+  ],
+},
   {
     id: 'burger-bachelor',
     name: 'Burger Bachelor',
