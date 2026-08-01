@@ -6,6 +6,52 @@ export const heroStats = [
 
 export const projects = [
   {
+    id: 'aqlura',
+    name: 'Aqlura',
+    type: 'Multi-Tenant SaaS Platform (Digital Menus)',
+    tone: 'dark',
+    image: 'projects/aqlura.png',
+    summary:
+      'A live multi-tenant SaaS platform providing digital menu systems for supermarket and restaurant clients in Lebanon, co-founded and built from the ground up.',
+    overview:
+      'Aqlura lets restaurant and retail brands launch a fully branded digital storefront in seconds through dynamic slug-based routing — no per-tenant deployment required. The platform serves paying clients with catalogs in the thousands of products, backed by a snapshot-caching architecture and a tuned Postgres database for production scale.',
+    challenge:
+      'Building a multi-tenant platform that can onboard a new store instantly, stay fast under real production load with large catalogs, and give non-technical store owners a dashboard powerful enough to run their business without needing a developer.',
+    solution:
+      'Designed dynamic slug-based tenant routing so every store is served by the same running app the moment it is provisioned. Built a snapshot-caching architecture that writes pre-built JSON to Supabase Storage so public storefronts serve as static reads, tuned PostgreSQL (autovacuum, ANALYZE, optimized RLS policies), and led a full frontend rewrite into clean services/hooks/utils layers. Also built a per-tenant storefront customizer (theme presets, layout, typography, custom code injection) and a super-admin layer for tenant provisioning and account management.',
+    role: 'Co-Founder, Senior Developer — full-stack engineering, architecture, admin/superadmin dashboards',
+    year: '2026',
+    stack: ['React', 'Tailwind CSS', 'Supabase', 'Framer Motion', 'Vite', 'PostgreSQL'],
+    highlights: [
+      'Dynamic slug-based routing so new tenant stores go live in seconds with no per-tenant deployment',
+      'Snapshot-caching architecture: pre-built JSON to Supabase Storage for fast, static public menu reads',
+      'Per-tenant admin dashboard (products, stock, orders, staff, analytics, bilingual EN/AR, light/dark mode)',
+      'Super-admin layer for tenant provisioning, monitoring, and account management',
+      'Per-tenant storefront customizer with theme presets, layout, typography, and custom code component injection',
+      'Paying clients with catalogs up to 1,000-1,400+ products at $25-50/month subscription tiers',
+    ],
+    metrics: [
+      { label: 'Status', value: 'Live, paying clients' },
+      { label: 'Store go-live time', value: 'Seconds' },
+      { label: 'Catalog size', value: 'Up to 1,400+ products' },
+    ],
+    progress: { value: 100, label: 'LIVE' },
+    deliverables: [
+      'Production multi-tenant web platform',
+      'Per-tenant admin dashboard',
+      'Super-admin tenant management layer',
+      'Storefront customizer',
+      'Snapshot-caching architecture',
+    ],
+    links: [
+      { label: 'Website', href: 'https://www.aqlura.com/' },
+      { label: 'Menu Platform', href: 'https://menu.aqlura.com/' },
+      { label: 'Jinan Kids (live storefront)', href: 'https://menu.aqlura.com/jinan-kids' },
+      { label: 'Baro Supermarket (live menu)', href: 'https://menus.aqlura.com/menu/baro-supermarket' },
+    ],
+  },
+
+  {
     id: 'triviav',
     name: 'TriviaV',
     type: 'Web & Mobile Trivia Platform (Gaming/Education)',
@@ -42,7 +88,7 @@ export const projects = [
       { label: 'Questions per level', value: '10' },
       { label: 'Difficulty bands', value: '1–3 • 4–7 • 8–10' },
     ],
-    progress: { value: 100, label: 'LIVE' },
+    progress: { value: 100, label: 'Backend paused (Railway)' },
     deliverables: [
       'Web application',
       'REST API backend',
@@ -52,8 +98,8 @@ export const projects = [
     ],
     links: [
       {
-        label: 'Website ',
-        href: 'https://trivia-verse-eight.vercel.app/',
+        label: 'GitHub',
+        href: 'https://github.com/houssamWaked/TriviaVerse',
       },
     ],
   },
@@ -104,468 +150,7 @@ export const projects = [
       },
     ],
   },
-  {
-    id: 'portfolio-site',
-    name: 'Personal Portfolio',
-    type: 'Web App (Portfolio)',
-    tone: 'purple',
-    image: 'projects/cv.png',
-    summary:
-      'A modern developer portfolio to showcase projects, skills, and experience.',
-    overview:
-      'A fast, responsive personal portfolio built to present projects with clear structure and strong visual identity. It focuses on readability, smooth navigation, and performance while staying minimal and professional.',
-    challenge:
-      'Creating a portfolio that feels professional without being boring, while keeping load time fast and content easy to update.',
-    solution:
-      'Designed a component-based layout with reusable project cards, smooth routing, and a structured data-driven system for easy scaling and maintenance.',
-    role: 'UI design, frontend development, content architecture',
-    year: '2025',
-    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-    highlights: [
-      'Data-driven project sections',
-      'Responsive layout for all screen sizes',
-      'Animated transitions',
-      'SEO-friendly structure',
-    ],
-    metrics: [
-      { label: 'Pages', value: '4+' },
-      { label: 'Lighthouse', value: '95+' },
-      { label: 'Load time', value: '< 1s' },
-    ],
-    progress: { value: 100, label: 'Completed' },
-    deliverables: [
-      'Portfolio website',
-      'Reusable UI components',
-      'Project showcase system',
-    ],
-    links: [
-      {
-        label: 'GitHub',
-        href: 'https://github.com/houssamWaked/Houssam_Alwaked_Portfolio',
-      },
-      {
-        label: 'Live Site',
-        href: 'https://houssamwaked.github.io/Houssam_Alwaked_Portfolio/',
-      },
-    ],
-  },
 
- {
-  id: 'aqlura-website',
-  name: 'Aqlura Website',
-  type: 'Full-Stack Company Website',
-  tone: 'dark',
-  image: 'projects/aqlura.png',
-
-  summary:
-    'Full-stack company website built with React and a Node/Express backend, designed to present Aqlura professionally and support client inquiries through a structured web platform.',
-
-  overview:
-    'Aqlura’s website is a production company website focused on credibility, clear service presentation, and client communication. It includes a public-facing React frontend connected to a backend API, allowing the business to present its services and handle website data in a structured way.',
-
-  challenge:
-    'Build a professional and reliable company website that clearly presents Aqlura’s services, improves trust with visitors, and keeps the platform easy to maintain and extend.',
-
-  solution:
-    'Developed a React-based frontend with a Node.js and Express backend, structured around clear API routes, reusable components, and a maintainable project architecture. The website was deployed online and connected to the live Aqlura domain.',
-
-  role:
-    'Full-stack development, frontend implementation, backend/API development, UI structure, deployment',
-
-  year: '2026',
-
-  stack: [
-    'React',
-    'JavaScript',
-    'Node.js',
-    'Express.js',
-    'MySQL',
-    'Vercel',
-    'GitHub Actions'
-  ],
-
-  highlights: [
-    'Live company website for Aqlura',
-    'React-based frontend with reusable sections and components',
-    'Backend API built with Node.js and Express',
-    'Professional service presentation and company branding',
-    'Responsive layout for desktop and mobile users',
-    'Structured project architecture for future updates',
-    'Live deployment connected to the official domain'
-  ],
-
-  metrics: [
-    { label: 'Status', value: 'Live' },
-    { label: 'Main stack', value: 'React + Node' }
-  ],
-
-  progress: { value: 100, label: 'Live' },
-
-  deliverables: [
-    'Production React frontend',
-    'Node/Express backend API',
-    'Responsive company website UI',
-    'Reusable frontend components',
-    'Deployment on live domain',
-    'Project structure ready for future improvements'
-  ],
-
-  links: [
-    { label: 'Website Domain', href: 'https://aqlura.com/' }
-  ],
-},
-  {
-    id: 'burger-bachelor',
-    name: 'Burger Bachelor',
-    type: 'Multi-Page Restaurant Website (Burger Brand)',
-    tone: 'dark',
-    image: 'projects/burger-website.png',
-    summary:
-      'A fully animated burger website connected to a live multi-tenant backend with dynamic menu/cart/admin flows.',
-    overview:
-      'Burger Bachelor is a full restaurant website with modern landing sections, category-based menu browsing, cart controls, responsive layouts, and a tenant admin dashboard. The frontend consumes live API data and supports multi-page routing and deployment-ready behavior on Vercel.',
-    challenge:
-      'Build a polished food website with real backend data, tenant isolation, admin controls, responsive UI, and deployment-safe routing/CORS behavior.',
-    solution:
-      'Implemented a data-driven frontend with tenant-aware API integration, local caching to reduce request costs, role-based admin flows, and backend endpoints for menu/content management. Finalized production deployment across Vercel (frontend) and Railway (API).',
-    role: 'Full-stack development, API integration, admin UX, deployment',
-    year: '2026',
-    stack: [
-      'React',
-      'Vite',
-      'Node.js',
-      'Express',
-      'PostgreSQL',
-      'Sequelize',
-      'Vercel',
-      'Railway',
-    ],
-    highlights: [
-      'Category-sorted menu with animated cards and detail interactions',
-      'Cart system with quantity controls and persistent state',
-      'Dedicated pages: Home, Menu, About, Blog, Contact',
-      'Tenant-aware admin dashboard with role-based access',
-      'Live API integration with cache-first behavior',
-      'Responsive design across desktop/tablet/mobile',
-    ],
-    metrics: [
-      { label: 'Architecture', value: 'Multi-tenant' },
-      { label: 'Frontend', value: 'Vercel' },
-      { label: 'Backend', value: 'Railway + PostgreSQL' },
-    ],
-    progress: { value: 100, label: 'LIVE' },
-    deliverables: [
-      'Production web frontend',
-      'Tenant-aware admin dashboard',
-      'API-backed menu and content management',
-      'Deployment + environment setup',
-    ],
-    links: [
-      { label: 'Live Website', href: 'https://menu-client-pi.vercel.app/' },
-      {
-        label: 'Frontend GitHub',
-        href: 'https://github.com/houssamWaked/MenuClient',
-      },
-      {
-        label: 'Backend GitHub',
-        href: 'https://github.com/houssamWaked/Menu_api',
-      },
-      { label: 'API', href: 'https://menuapi-production.up.railway.app/' },
-    ],
-  },
-  {
-    id: 'Savoria',
-    name: 'Savoria',
-    type: 'Coffe Restaurant Website',
-    tone: 'dark',
-    image: 'projects/coffee-website.png',
-    summary:
-      'A modern coffee restaurant website with dynamic menu, cart, and admin features powered by a shared multi-tenant backend.',
-    overview:
-      'Savoria is a full-featured restaurant website designed for a coffee brand. It includes a dynamic menu, cart system, responsive design, and an admin dashboard for content management. The frontend connects to the same multi-tenant backend as Burger Bachelor but presents a distinct tenant experience.',
-    challenge:
-      'Creating a second restaurant website that reuses the existing backend architecture while maintaining separate tenant data, branding, and deployment compatibility.',
-    solution:
-      'Extended the multi-tenant model to support Savoria as a new tenant with its own branding and content. Configured tenant-specific login and data handling while sharing the same API endpoints. Deployed the frontend on Vercel with environment variables to ensure proper CORS and API integration.',
-    role: 'Full-stack development, multi-tenant architecture, frontend theming, deployment configuration',
-    year: '2026',
-    stack: [
-      'React',
-      'Vite',
-      'Node.js',
-      'Express',
-      'PostgreSQL',
-      'Sequelize',
-      'Vercel',
-      'Railway',
-    ],
-    highlights: [
-      'Shared backend with separate tenant experience',
-      'Coffee-themed design and menu content',
-      'Admin dashboard for Savoria content management',
-      'Deployment-ready configuration for multi-tenant setup',
-    ],
-    metrics: [
-      { label: 'Tenant Slug', value: 'savoria' },
-      { label: 'Backend Reuse', value: '100%' },
-      { label: 'Admin Model', value: 'Role-based' },
-    ],
-    progress: { value: 100, label: 'LIVE' },
-    deliverables: [
-      'Savoria-branded production frontend',
-      'Tenant data + admin setup',
-      'Shared backend integration',
-      'Deployment-ready environment configuration',
-    ],
-    links: [
-      {
-        label: 'Live Website',
-        href: 'https://menu-client-uswm.vercel.app/?slug=savoria',
-      },
-      {
-        label: 'Frontend GitHub',
-        href: 'https://github.com/houssamWaked/MenuClient',
-      },
-      {
-        label: 'Backend GitHub',
-        href: 'https://github.com/houssamWaked/Menu_api',
-      },
-      { label: 'API', href: 'https://menuapi-production.up.railway.app/' },
-    ],
-  },
-  {
-    id: 'pizza-palazzo',
-    name: 'Pizza Palazzo',
-    type: 'Multi-Page Restaurant Website (Pizza Brand)',
-    tone: 'purple',
-    image: 'projects/pizza-website.png',
-    summary:
-      'A full pizza website rebuilt on the same backend platform with a distinct visual style and tenant-specific content.',
-    overview:
-      'Pizza Palazzo reuses the same production backend architecture but presents a separate tenant experience with different branding, sections, and menu data. It demonstrates how one backend can power multiple restaurant websites with isolated accounts and content.',
-    challenge:
-      'Launch a second brand fast without cloning backend complexity, while preserving separate tenant data, admin accounts, and deployment compatibility.',
-    solution:
-      'Extended the existing multi-tenant model and connected a redesigned frontend tenant to the same API. Configured tenant-specific login/content and deployment variables to keep both websites independent but operationally efficient.',
-    role: 'Multi-tenant product engineering, frontend theming, backend reuse strategy',
-    year: '2026',
-    stack: [
-      'React',
-      'Vite',
-      'Node.js',
-      'Express',
-      'PostgreSQL',
-      'Sequelize',
-      'Vercel',
-      'Railway',
-    ],
-    highlights: [
-      'Separate tenant content and admin credentials',
-      'Same backend, different brand/site experience',
-      'Reusable architecture for future restaurant brands',
-      'CORS, env, and deployment troubleshooting in production',
-      'Data seeding and tenant bootstrap workflow',
-    ],
-    metrics: [
-      { label: 'Tenant Slug', value: 'pizza-palazzo' },
-      { label: 'Backend Reuse', value: '100%' },
-      { label: 'Admin Model', value: 'Role-based' },
-    ],
-    progress: { value: 100, label: 'LIVE' },
-    deliverables: [
-      'Pizza-branded production frontend',
-      'Tenant data + admin setup',
-      'Shared backend integration',
-      'Deployment-ready environment configuration',
-    ],
-    links: [
-      { label: 'Live Website', href: 'https://menu-client-hkrw.vercel.app/' },
-      {
-        label: 'Frontend GitHub',
-        href: 'https://github.com/houssamWaked/MenuClient',
-      },
-      {
-        label: 'Backend GitHub',
-        href: 'https://github.com/houssamWaked/Menu_api',
-      },
-      { label: 'API', href: 'https://menuapi-production.up.railway.app/' },
-    ],
-  },
-  {
-    id: 'menu-admin-dashboard',
-    name: 'Menu Admin Dashboard',
-    type: 'SaaS Admin Dashboard (Multi-Tenant Restaurant CMS)',
-    tone: 'blue',
-    image: 'projects/menu-admin-dashboard.png',
-    summary:
-      'A role-based dashboard that lets non-technical restaurant owners manage menus, categories, items, pricing, and media in a simple workflow.',
-    overview:
-      'This admin dashboard powers tenant operations for the restaurant platform. It includes super-admin and tenant-admin access levels, guided CRUD flows, KPI cards, file-based image uploads, and streamlined management screens built for users with no programming background.',
-    challenge:
-      'Design an admin experience that stays powerful for business operations but remains simple enough for first-time users, while preserving strict tenant isolation.',
-    solution:
-      'Implemented email/password role detection, separated super-admin and tenant-admin responsibilities, card-based management UX, image upload processing, and API-driven CRUD backed by PostgreSQL with production deployment on Railway/Vercel.',
-    role: 'Full-stack engineering, admin UX architecture, API design',
-    year: '2026',
-    stack: [
-      'React',
-      'Vite',
-      'Axios',
-      'Node.js',
-      'Express',
-      'PostgreSQL',
-      'Sequelize',
-      'JWT',
-      'Railway',
-      'Vercel',
-    ],
-    highlights: [
-      'Automatic role detection from login email (super admin vs tenant admin)',
-      'Tenant-only content management with permission guards',
-      'Super-admin tenant/account provisioning workflow',
-      'Guided add/manage/account tabs with KPI summaries',
-      'Image upload support via local file selection and preview',
-      'Search + edit + remove flows for large menu datasets',
-    ],
-    metrics: [
-      { label: 'Roles', value: 'Super Admin + Tenant Admin' },
-      { label: 'Core entities', value: 'Menus • Categories • Items' },
-      { label: 'Data model', value: 'Multi-tenant PostgreSQL' },
-    ],
-    progress: { value: 100, label: 'LIVE' },
-    deliverables: [
-      'Responsive admin frontend',
-      'Secure admin auth/session flow',
-      'Tenant account management',
-      'Menu/category/item management UI',
-      'Production backend integration',
-    ],
-    links: [
-      { label: 'Preview Image', href: '/projects/menu-admin-dashboard.png' },
-      {
-        label: 'Frontend GitHub',
-        href: 'https://github.com/houssamWaked/MenuClient',
-      },
-      {
-        label: 'Backend GitHub',
-        href: 'https://github.com/houssamWaked/Menu_api',
-      },
-    ],
-  },
-  {
-    id: 'Manakish Shop Menu',
-    name: 'Manakish Shop Menu',
-    type: 'Single-Page Restaurant Website (Manakish Brand)',
-    tone: 'green',
-    image: 'projects/manakish.png',
-    summary:
-      'A single-page website for a manakish restaurant with menu, contact info, and location sections.',
-    overview:
-      'This project is a simple, elegant single-page website designed for a manakish restaurant. It features a clean layout with sections for the menu, contact information, and location details, all optimized for quick updates and mobile viewing.',
-    challenge:
-      'Create a focused restaurant website that delivers essential information without overwhelming visitors, while maintaining a distinct brand identity.',
-    solution:
-      'Designed a single-page layout with clear sections for menu items, contact details, and location. Used a consistent color scheme and typography to reflect the brand while ensuring the site is easy to navigate and update.',
-    role: 'Frontend development, UI design',
-    year: '2025',
-    stack: [
-      'React',
-      'Vite',
-      'CSS',
-      'node.js',
-      'Express',
-      'PostgreSQL',
-      'Sequelize',
-      'Vercel',
-      'Railway',
-    ],
-    highlights: [
-      'Single-page design with clear sections',
-      'Cart system with quantity controls and persistent state',
-      'Mobile-first responsive layout',
-      'Brand-focused color scheme and typography',
-      'Easy content update structure',
-      'Easy to Use Admin Dashboard',
-    ],
-    metrics: [
-      { label: 'Pages', value: '1' },
-      { label: 'Load time', value: '< 1s' },
-      { label: 'Sections', value: 'Menu • Cart' },
-    ],
-    progress: { value: 100, label: 'LIVE' },
-    deliverables: [
-      'Single-page restaurant website',
-      'Menu and contact sections',
-      'Mobile-responsive design',
-    ],
-    links: [
-      {
-        label: 'Live Website',
-        href: 'https://manakish.vercel.app/',
-      },
-      {
-        label: 'Frontend GitHub',
-        href: 'https://github.com/houssamWaked/Manakish',
-      },
-      {
-        label: 'Backend GitHub',
-        href: 'https://github.com/houssamWaked/Manakish',
-      },
-    ],
-  },
-  // {
-  //   id: 'mini-market-api',
-  //   name: 'Mini Market API',
-  //   type: 'Backend API (E-commerce / Inventory & Orders)',
-  //   tone: 'blue',
-  //   image: 'projects/market.png',
-  //   summary:
-  //     'A production-ready Spring Boot REST API for product and order management with Firestore persistence, stock validation, and API-key protection.',
-  //   overview:
-  //     'Mini Market API is a backend service built for a mini market system. It provides CRUD for products, predefined categories, and order creation with transactional stock decrement in Firestore. It is designed to be frontend-friendly with consistent JSON errors, environment-based CORS, and secure access via an API key header.',
-  //   challenge:
-  //     'Ensuring stock integrity during concurrent order creation while keeping the API simple, predictable, and safe for browser-based clients (CORS + preflight) without adding heavy infrastructure or SQL.',
-  //   solution:
-  //     'Implemented Firestore-backed repositories with transactional stock checks and atomic decrement during order creation. Added dedicated stock adjustment endpoints, centralized error handling with a consistent JSON schema, environment-driven CORS allowlist for web clients, and API-key middleware for all /api/* routes.',
-  //   role: 'Backend development, API design, security, deployment configuration',
-  //   year: '2026',
-  //   stack: [
-  //     'Java 17',
-  //     'Spring Boot',
-  //     'Firestore',
-  //     'Firebase Admin SDK',
-  //     'REST API',
-  //     'Railway',
-  //   ],
-  //   highlights: [
-  //     'Product CRUD (create/list/update/delete)',
-  //     'Order creation with stock validation',
-  //     'Atomic stock decrement with Firestore transactions',
-  //     'Dedicated stock set/decrement endpoints',
-  //     'Predefined categories endpoint',
-  //     'Centralized JSON error responses',
-  //     'API key protection for all /api/* routes',
-  //     'Environment-based CORS allowlist for frontend access',
-  //   ],
-  //   metrics: [
-  //     { label: 'Deploy', value: 'Railway' },
-  //     { label: 'Persistence', value: 'Firestore' },
-  //     { label: 'Auth', value: 'X-API-KEY' },
-  //     { label: 'Core Resources', value: 'Products / Orders / Categories' },
-  //   ],
-  //   progress: { value: 100, label: 'PRODUCTION READY' },
-  //   deliverables: [
-  //     'Spring Boot backend service',
-  //     'Firestore collections (products, categories, orders)',
-  //     'Order transaction + stock integrity logic',
-  //     'API key security layer',
-  //     'CORS configuration via environment variables',
-  //     'Postman-ready API documentation (README)',
-  //   ],
-  //   links: [
-  //     { label: 'GitHub', href: 'https://github.com/houssamWaked/MiniShopApi' },
-  //   ],
-  // },
   {
     id: 'scout-app',
     name: 'ScoutHub',
@@ -624,6 +209,50 @@ export const projects = [
       },
     ],
   },
+
+  {
+    id: 'unity-platformer',
+    name: 'Unity 3D Platformer',
+    type: 'Game (3D Platformer)',
+    tone: 'green',
+    image: 'projects/unity.png',
+    summary:
+      'A low-poly 3D platformer built in Unity, my first Unity project, featuring multiplayer networking and a full playable track.',
+    overview:
+      'A cartoon-style 3D platformer with a complete track including music, animated character movement, moving hazards, and vehicle sections. Built from scratch as an introduction to Unity and C# game scripting, later expanded with multiplayer networking and a lobby system.',
+    challenge:
+      'Learning Unity and C# game scripting from scratch while building mechanics that feel responsive: character movement, moving traps, and vehicle controls, then extending a single-player prototype into a networked multiplayer experience.',
+    solution:
+      'Built a CharacterController-based player with idle/run/jump animations, scripted moving hazards (rolling log, explosive mines), a launch pad, and death/respawn/level-finish logic. Added a driveable car and a helicopter with attack mechanics, then layered in multiplayer networking and a lobby system so players can join the same track together.',
+    role: 'Solo developer — game design, C# scripting, level design',
+    year: '2026',
+    stack: ['Unity', 'C#', 'CharacterController', 'Multiplayer Networking'],
+    highlights: [
+      'Multiplayer networking with a lobby system',
+      'Custom C# character controller with idle/run/jump animations',
+      'Moving hazards: rolling log traps and explosive mines',
+      'Driveable car and a helicopter with attack/cannon mechanics',
+      'Full track with music and cartoon-style visuals',
+    ],
+    metrics: [
+      { label: 'Tracks', value: '1 full track' },
+      { label: 'Mode', value: 'Multiplayer' },
+      { label: 'Engine', value: 'Unity' },
+    ],
+    progress: { value: 100, label: 'PLAYABLE' },
+    deliverables: [
+      'Playable Unity build',
+      'Multiplayer lobby system',
+      'Custom player controller and animations',
+      'Vehicle mechanics (car, helicopter)',
+    ],
+    links: [
+      {
+        label: 'Playable Demo',
+        href: 'https://github.com/houssamWaked/PlatformGame/releases/tag/v0.1-demo',
+      },
+    ],
+  },
 ];
 
 export const experiences = [
@@ -659,111 +288,35 @@ export const experiences = [
 
 export const tools = [
   // Languages
-  {
-    name: 'JavaScript',
-    description: 'Core language for web and app development',
-    icon: 'javascript',
-  },
-  {
-    name: 'TypeScript',
-    description: 'Typed superset of JavaScript for scalable apps',
-    icon: 'typescript',
-  },
-  {
-    name: 'C++',
-    description: 'Systems programming and algorithmic problem solving',
-    icon: 'cplusplus',
-  },
-  {
-    name: 'Java',
-    description: 'Object-oriented programming and backend foundations',
-    icon: 'java',
-  },
+  { name: 'JavaScript', description: 'Core language for web and app development', icon: 'javascript' },
+  { name: 'TypeScript', description: 'Typed superset of JavaScript for scalable apps', icon: 'typescript' },
+  { name: 'C++', description: 'Systems programming and algorithmic problem solving', icon: 'cplusplus' },
+  { name: 'Java', description: 'Object-oriented programming and backend foundations', icon: 'java' },
 
   // Frontend
-  {
-    name: 'React',
-    description: 'Component-based UI library for web interfaces',
-    icon: 'react',
-  },
-  {
-    name: 'Next.js',
-    description: 'React framework for production-ready web apps',
-    icon: 'nextjs',
-  },
-  {
-    name: 'HTML',
-    description: 'Structuring web content',
-    icon: 'html5',
-  },
-  {
-    name: 'CSS',
-    description: 'Styling and responsive layouts',
-    icon: 'css',
-  },
+  { name: 'React', description: 'Component-based UI library for web interfaces', icon: 'react' },
+  { name: 'Next.js', description: 'React framework for production-ready web apps', icon: 'nextjs' },
+  { name: 'HTML', description: 'Structuring web content', icon: 'html5' },
+  { name: 'CSS', description: 'Styling and responsive layouts', icon: 'css' },
 
   // Mobile
-  {
-    name: 'React Native',
-    description: 'Cross-platform mobile development',
-    icon: 'reactnative',
-  },
-  {
-    name: 'Expo',
-    description: 'React Native toolchain and deployment',
-    icon: 'expo',
-  },
-  {
-    name: 'JavaFX',
-    description: 'Desktop application development with Java',
-    icon: 'javafx',
-  },
+  { name: 'React Native', description: 'Cross-platform mobile development', icon: 'reactnative' },
+  { name: 'Expo', description: 'React Native toolchain and deployment', icon: 'expo' },
+  { name: 'JavaFX', description: 'Desktop application development with Java', icon: 'javafx' },
 
   // Backend
-  {
-    name: 'Node.js',
-    description: 'JavaScript runtime for backend services',
-    icon: 'nodejs',
-  },
-  {
-    name: 'Express.js',
-    description: 'Minimal backend framework for APIs',
-    icon: 'express',
-  },
-  {
-    name: 'Spring Boot',
-    description: 'Java framework for building RESTful backends',
-    icon: 'springboot',
-  },
+  { name: 'Node.js', description: 'JavaScript runtime for backend services', icon: 'nodejs' },
+  { name: 'Express.js', description: 'Minimal backend framework for APIs', icon: 'express' },
+  { name: 'Spring Boot', description: 'Java framework for building RESTful backends', icon: 'springboot' },
 
   // Database & Backend Services
-  {
-    name: 'MySQL',
-    description: 'Relational database management system',
-    icon: 'mysql',
-  },
-  {
-    name: 'Supabase',
-    description: 'Backend-as-a-service with auth and database',
-    icon: 'supabase',
-  },
+  { name: 'MySQL', description: 'Relational database management system', icon: 'mysql' },
+  { name: 'Supabase', description: 'Backend-as-a-service with auth and database', icon: 'supabase' },
 
   // Design & Product
-  {
-    name: 'Figma',
-    description: 'UI/UX design and prototyping',
-    icon: 'figma',
-  },
-  {
-    name: 'Framer',
-    description: 'Interactive website builder and animations',
-    icon: 'framer',
-  },
+  { name: 'Figma', description: 'UI/UX design and prototyping', icon: 'figma' },
+  { name: 'Framer', description: 'Interactive website builder and animations', icon: 'framer' },
 
   // Tools
-  {
-    name: 'Git',
-    description: 'Version control and collaboration',
-    icon: 'git',
-  },
+  { name: 'Git', description: 'Version control and collaboration', icon: 'git' },
 ];
